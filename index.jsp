@@ -102,6 +102,8 @@ Sfdc.canvas(function() {
     { client : sr.client,
         method: 'GET',
         contentType: "application/json",
+        headers : {
+       },
         success : function(data) {
           console.debug('Got Data New',data);
         },
