@@ -87,7 +87,7 @@ Sfdc.canvas(function() {
 
     var sizes = Sfdc.canvas.client.size();
     // Turn on auto grow with default settings.
-    Sfdc.canvas.client.autogrow(sr.client);
+    // Sfdc.canvas.client.autogrow(sr.client);
     // Save the token
     Sfdc.canvas.oauth.token(sr.client.oauthToken);
     // Set the inner html of the overview
@@ -102,6 +102,9 @@ Sfdc.canvas(function() {
         contentType: "application/json",
         success : function(data) {
           console.debug('Got Data New',data);
+        },
+        error : function(error) {
+          console.debug('error',error);
         }
     });
 
