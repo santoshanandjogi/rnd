@@ -79,6 +79,38 @@ $(document).ready(function() {
       
 
 function callSfdcCanvas() {
+
+  // Paste the signed request string into a JavaScript object for easy access.
+var srNew = JSON.parse('<%=signedRequestJson%>');
+// Reference the Chatter user's URL from Context.Links object.
+var chatterUsersUrl = srNew.context.links.chatterUsersUrl;
+
+// Make an XHR call back to salesforce through the supplied browser proxy. 
+Sfdc.canvas.client.ajax(chatterUsersUrl, 
+    {client : srNew.client,
+    success : function(data){
+    // Make sure the status code is OK.
+    if (data.status === 200) {
+        // Alert with how many Chatter users were returned.
+        alert("Got back "  + data.payload.users.length + 
+        " users"); // Returned 2 users
+    }
+}});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Sfdc.canvas(function() {
     var sizes = Sfdc.canvas.client.size();
     console.log("contentHeight; " + sizes.heights.contentHeight);
