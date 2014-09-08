@@ -97,7 +97,7 @@ Sfdc.canvas(function() {
     Sfdc.canvas.client.resize(sr.client, {width : "100%"});
   });
 
-  var query = sr.context.links.queryUrl+'?q=SELECT+id+,+name+from+Account';
+  var query = sr.context.links.queryUrl+'?q=SELECT+name+from+Account';
   console.log(query);
   Sfdc.canvas.client.ajax(query, {client:sr.client, method:"GET", contentType:"application/json",
     success:function(data) {
