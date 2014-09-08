@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,24 +74,35 @@ $(document).ready(function() {
     // Not in Iframe
     alert("This canvas app must be included within an iframe");
   }
-      var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":798284367,"userId":"005o0000000KmuMAAS","client":{"clientId":null,"instanceId":"09Ho00000008knt:","targetOrigin":"https://na17.salesforce.com","instanceUrl":"https://na17.salesforce.com","oauthToken":"00Do0000000YsLj!ARkAQPGgJRzLie421iBYgG6dp4JhW9x3sDI449_A5CczoQKtq5G8u0cmhm6su69MfM5pIAcjEM64qQ4.dZU5ToM6p2tG5s12"},"context":{"user":{"userId":"005o0000000KmuMAAS","userName":"hemant@40demo.com","firstName":"Hemant","lastName":"Thakkar","email":"hemant.thakkar@simplion.com","fullName":"Hemant Thakkar","locale":"en_US","language":"en_US","timeZone":"America/Los_Angeles","profileId":"00eo0000000roK4","roleId":null,"userType":"STANDARD","currencyISOCode":"USD","profilePhotoUrl":"https://c.na17.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://c.na17.content.force.com/profilephoto/005/T","accessibilityModeEnabled":false},"links":{"enterpriseUrl":"/services/Soap/c/31.0/00Do0000000YsLj","metadataUrl":"/services/Soap/m/31.0/00Do0000000YsLj","partnerUrl":"/services/Soap/u/31.0/00Do0000000YsLj","restUrl":"/services/data/v31.0/","sobjectUrl":"/services/data/v31.0/sobjects/","searchUrl":"/services/data/v31.0/search/","queryUrl":"/services/data/v31.0/query/","recentItemsUrl":"/services/data/v31.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v31.0/chatter/groups","chatterUsersUrl":"/services/data/v31.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/005o0000000KmuMAAS"},"environment":{"locationUrl":"https://na17.salesforce.com/003o0000005s1KD","uiTheme":"Theme3","dimensions":{"width":"100%","height":"200px"},"record":{"attributes":{"type":"Contact","url":"/services/data/v31.0/sobjects/Contact/003o0000005s1KDAAY"},"Id":"003o0000005s1KDAAY"},"displayLocation":"PageLayout","parameters":{},"sublocation":null,"version":{"season":"SUMMER","api":"31.0"}},"organization":{"organizationId":"00Do0000000YsLjEAK","name":"Refresh","multicurrencyEnabled":false,"currencyIsoCode":"USD"}}}');
+      // var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":798284367,"userId":"005o0000000KmuMAAS","client":{"clientId":null,"instanceId":"09Ho00000008knt:","targetOrigin":"https://na17.salesforce.com","instanceUrl":"https://na17.salesforce.com","oauthToken":"00Do0000000YsLj!ARkAQPGgJRzLie421iBYgG6dp4JhW9x3sDI449_A5CczoQKtq5G8u0cmhm6su69MfM5pIAcjEM64qQ4.dZU5ToM6p2tG5s12"},"context":{"user":{"userId":"005o0000000KmuMAAS","userName":"hemant@40demo.com","firstName":"Hemant","lastName":"Thakkar","email":"hemant.thakkar@simplion.com","fullName":"Hemant Thakkar","locale":"en_US","language":"en_US","timeZone":"America/Los_Angeles","profileId":"00eo0000000roK4","roleId":null,"userType":"STANDARD","currencyISOCode":"USD","profilePhotoUrl":"https://c.na17.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://c.na17.content.force.com/profilephoto/005/T","accessibilityModeEnabled":false},"links":{"enterpriseUrl":"/services/Soap/c/31.0/00Do0000000YsLj","metadataUrl":"/services/Soap/m/31.0/00Do0000000YsLj","partnerUrl":"/services/Soap/u/31.0/00Do0000000YsLj","restUrl":"/services/data/v31.0/","sobjectUrl":"/services/data/v31.0/sobjects/","searchUrl":"/services/data/v31.0/search/","queryUrl":"/services/data/v31.0/query/","recentItemsUrl":"/services/data/v31.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v31.0/chatter/groups","chatterUsersUrl":"/services/data/v31.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/005o0000000KmuMAAS"},"environment":{"locationUrl":"https://na17.salesforce.com/003o0000005s1KD","uiTheme":"Theme3","dimensions":{"width":"100%","height":"200px"},"record":{"attributes":{"type":"Contact","url":"/services/data/v31.0/sobjects/Contact/003o0000005s1KDAAY"},"Id":"003o0000005s1KDAAY"},"displayLocation":"PageLayout","parameters":{},"sublocation":null,"version":{"season":"SUMMER","api":"31.0"}},"organization":{"organizationId":"00Do0000000YsLjEAK","name":"Refresh","multicurrencyEnabled":false,"currencyIsoCode":"USD"}}}');
+
+
+      var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":1423202838,"userId":"005o0000000j4ktAAA","client":{"refreshToken":null,"instanceId":"refresh_io:Refresh_App:","targetOrigin":"https://na17.salesforce.com","instanceUrl":"https://na17.salesforce.com","oauthToken":"00Do0000000YsKS!ARcAQH7D12KoYEzVksxlI4B57S36EHp.t2_QdBP_Rz3zbL0_Q_oii495cDbM8Co7xS19LLmpXUarbX38p8KcIHBZmcgPApEJ"},"context":{"user":{"userId":"005o0000000j4ktAAA","userName":"hemant.thakkar@5demo.com","firstName":"Hemant","lastName":"Thakkar","email":"hemant.thakkar@simplion.com","fullName":"Hemant Thakkar","locale":"en_US","language":"en_US","timeZone":"America/Los_Angeles","profileId":"00eo0000000roL1","roleId":null,"userType":"STANDARD","currencyISOCode":"USD","profilePhotoUrl":"https://c.na17.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://c.na17.content.force.com/profilephoto/005/T","siteUrl":null,"siteUrlPrefix":null,"networkId":null,"accessibilityModeEnabled":false,"isDefaultNetwork":true},"links":{"loginUrl":"https://login.salesforce.com/","enterpriseUrl":"/services/Soap/c/31.0/00Do0000000YsKS","metadataUrl":"/services/Soap/m/31.0/00Do0000000YsKS","partnerUrl":"/services/Soap/u/31.0/00Do0000000YsKS","restUrl":"/services/data/v31.0/","sobjectUrl":"/services/data/v31.0/sobjects/","searchUrl":"/services/data/v31.0/search/","queryUrl":"/services/data/v31.0/query/","recentItemsUrl":"/services/data/v31.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v31.0/chatter/groups","chatterUsersUrl":"/services/data/v31.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/005o0000000j4ktAAA"},"application":{"namespace":"refresh_io","name":"Refresh","canvasUrl":"https://play.simplion.com/refreshdemo/demo.php?aid=cqp3oUwdmc4dfXdW","applicationId":"06Po00000004ThO","version":"1.0","authType":"SIGNED_REQUEST","referenceId":"09Ho00000000HRw","options":[],"samlInitiationMethod":"None","developerName":"Refresh_App"},"organization":{"organizationId":"00Do0000000YsKSEA0","name":"Refresh","multicurrencyEnabled":false,"namespacePrefix":"refresh_io","currencyIsoCode":"USD"},"environment":{"locationUrl":"https://na17.salesforce.com/_ui/force/canvas/ui/CanvasPreviewerUi?retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DStudio&setupid=CanvasPreviewerUi","displayLocation":null,"sublocation":null,"uiTheme":"Theme3","dimensions":{"width":"800px","height":"900px","maxWidth":"1000px","maxHeight":"2000px","clientWidth":"1472px","clientHeight":"80px"},"parameters":{},"record":{},"version":{"season":"SUMMER","api":"31.0"}}}} ');
+
+
+  // var sr = JSON.parse('<?=$sr?>');
       
-
+  // console.debug("SR ", '<?=$sr?>');
 function callSfdcCanvas() {
+        var url = "/services/data/v26.0/query?q=SELECT+ID,NAME+FROM+ACCOUNT";
+  //var sr = JSON.parse('<?=$sr?>');
 
-  var chatterUsersUrl = sr.context.links.chatterUsersUrl;
+        $(document).ready(function() {
+    console.debug(sr);
+    // $('#user-name').html(sr.context.user.fullName);
 
-// Make an XHR call back to salesforce through the supplied browser proxy. 
-Sfdc.canvas.client.ajax(chatterUsersUrl, 
-    {client : sr.client,
-    success : function(data){
-    // Make sure the status code is OK.
-    if (data.status === 200) {
-        // Alert with how many Chatter users were returned.
-        alert("Got back "  + data.payload.users.length + 
-        " users"); // Returned 2 users
-    }
-}});
+  //within a Canvas iFrame, AJAX calls proxy via the window messaging
+        Sfdc.canvas.client.ajax(url,
+            { client : sr.client,
+                method: 'GET',
+                contentType: "application/json",
+                success : function(data) {
+                console.debug('Got Data');
+                console.debug(data);
+            // $('#accountTable').append(ich.accounts(data.payload));
+                }
+            });
+    });
 
 
   
