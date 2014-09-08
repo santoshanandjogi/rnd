@@ -104,6 +104,7 @@ Sfdc.canvas(function() {
         contentType: "application/json",
         headers : {
            "SalesforceProxy-Endpoint" : sr.client.instanceUrl + "/services/apexrest/Account/001i000000iLoMf",
+           "Authorization" : "OAuth "  + sr.client.oauthToken,
        },
         success : function(data) {
           console.debug('Got Data New',data);
