@@ -87,7 +87,7 @@ function callSfdcCanvas() {
                 contentType: "application/json",
                 success : function(data) {
                 console.debug('Got Data ',data);
-                  $('#accountTable').append(ich.accounts(data.payload));
+                  // $('#accountTable').append(ich.accounts(data.payload));
                 }
             });
     });
