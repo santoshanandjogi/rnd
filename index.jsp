@@ -82,7 +82,7 @@ function callSfdcCanvas() {
 Sfdc.canvas(function() {
 
 
-  var queryURL = sr.context.links.queryUrl+ '?q=SELECT+Id,+Name+FROM+Contact';
+  var queryURL = sr.context.links.queryUrl+'?q=SELECT+Name+FROM+Contact';
   // var query = sr.context.links.queryUrl+'?q=SELECT+name+from+Account';
   // console.log(query);
 
