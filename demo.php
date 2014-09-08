@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 	var sr = JSON.parse('<?=$sr?>');
       
-	console.debug("SR ", sr);
+	console.debug("SR ", '<?=$sr?>');
 function callSfdcCanvas() {
         var url = "/services/data/v26.0/query?q=SELECT+ID,NAME+FROM+ACCOUNT";
 	//var sr = JSON.parse('<?=$sr?>');
