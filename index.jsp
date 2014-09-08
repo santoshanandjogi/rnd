@@ -101,7 +101,7 @@ Sfdc.canvas(function() {
         method: 'GET',
         contentType: "application/json",
         success : function(data) {
-          console.debug('Got Data ',data);
+          console.debug('Got Data New',data);
         }
     });
 
