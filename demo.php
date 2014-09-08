@@ -110,14 +110,14 @@ $(document).ready(function() {
 
 	var sr = JSON.parse('<?=$sr?>');
       
-
+	console.debug("SR ", sr);
 function callSfdcCanvas() {
         var url = "/services/data/v26.0/query?q=SELECT+ID,NAME+FROM+ACCOUNT";
 	//var sr = JSON.parse('<?=$sr?>');
 
         $(document).ready(function() {
 		console.debug(sr);
-		$('#user-name').html(sr.context.user.fullName);
+		// $('#user-name').html(sr.context.user.fullName);
 
 	//within a Canvas iFrame, AJAX calls proxy via the window messaging
         Sfdc.canvas.client.ajax(url,
@@ -125,9 +125,9 @@ function callSfdcCanvas() {
                 method: 'GET',
                 contentType: "application/json",
                 success : function(data) {
-						console.debug('Got Data');
-						console.debug(data);
-						$('#accountTable').append(ich.accounts(data.payload));
+								console.debug('Got Data');
+								console.debug(data);
+						// $('#accountTable').append(ich.accounts(data.payload));
                 }
             });
 		});
