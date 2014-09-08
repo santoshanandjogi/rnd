@@ -96,10 +96,10 @@ Sfdc.canvas(function() {
     // set width to 100%
     Sfdc.canvas.client.resize(sr.client, {width : "100%"});
   });
-
+  var queryURL = sr.context.links.queryUrl.substring(0, sr.context.links.queryUrl.length-1) + '?q=SELECT+Id,+Name+FROM+Contact';
   var query = sr.context.links.queryUrl+'?q=SELECT+name+from+Account';
   console.log(query);
-  Sfdc.canvas.client.ajax(query, {client:sr.client, method:"GET", contentType:"application/json",
+  Sfdc.canvas.client.ajax(queryURL, {client:sr.client, method:"GET", contentType:"application/json",
     success:function(data) {
       console.log(data);
     }  
