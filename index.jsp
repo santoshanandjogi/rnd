@@ -82,24 +82,17 @@ function callSfdcCanvas() {
 Sfdc.canvas(function() {
 
 
-  var queryURL = sr.context.links.queryUrl.substring(0, sr.context.links.queryUrl.length-1) + '?q=SELECT+Id,+Name+FROM+Contact';
-  var query = sr.context.links.queryUrl+'?q=SELECT+name+from+Account';
+  var queryURL = sr.context.links.queryUrl+ '?q=SELECT+Id,+Name+FROM+Contact';
+  // var query = sr.context.links.queryUrl+'?q=SELECT+name+from+Account';
   console.log(query);
 
   Sfdc.canvas.client.ajax(queryURL,
-                {
-                    client: sr.client,
-                    success: function (data) {
-                        // Make sure the status code is OK.
-                        if (data.status === 200) {
-                            for(var i=0; i<data.payload.records.length; i++)
-                            {
-// Get Names of the resulted records.
-                               console.log(data.payload.records[i].Name);
-                            }
-                        }
-                    }
-                });
+  {
+      client: sr.client,
+      success: function (data) {
+        console.log(data);
+      }
+  });
 
 
 
@@ -108,7 +101,7 @@ Sfdc.canvas(function() {
 
 
 
-  
+
     var sizes = Sfdc.canvas.client.size();
     console.log("contentHeight; " + sizes.heights.contentHeight);
     console.log("pageHeight; " + sizes.heights.pageHeight);
