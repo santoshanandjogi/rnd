@@ -5,6 +5,9 @@
 <link type="text/css" rel="stylesheet" href="https://cdn.refresh.io/public/stylesheets/app/all.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://na17.salesforce.com/canvas/sdk/js/31.0/canvas-all.js"></script>
+
+
 <script type="text/javascript">
   callSfdcCanvas();
 </script>
