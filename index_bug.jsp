@@ -9,7 +9,35 @@
 
 
 <script type="text/javascript">
-  callSfdcCanvas();
+  var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":798284367,"userId":"005o0000000KmuMAAS","client":{"clientId":null,"instanceId":"09Ho00000008knt:","targetOrigin":"https://na17.salesforce.com","instanceUrl":"https://na17.salesforce.com","oauthToken":"00Do0000000YsLj!ARkAQPGgJRzLie421iBYgG6dp4JhW9x3sDI449_A5CczoQKtq5G8u0cmhm6su69MfM5pIAcjEM64qQ4.dZU5ToM6p2tG5s12"},"context":{"user":{"userId":"005o0000000KmuMAAS","userName":"hemant@40demo.com","firstName":"Hemant","lastName":"Thakkar","email":"hemant.thakkar@simplion.com","fullName":"Hemant Thakkar","locale":"en_US","language":"en_US","timeZone":"America/Los_Angeles","profileId":"00eo0000000roK4","roleId":null,"userType":"STANDARD","currencyISOCode":"USD","profilePhotoUrl":"https://c.na17.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://c.na17.content.force.com/profilephoto/005/T","accessibilityModeEnabled":false},"links":{"enterpriseUrl":"/services/Soap/c/31.0/00Do0000000YsLj","metadataUrl":"/services/Soap/m/31.0/00Do0000000YsLj","partnerUrl":"/services/Soap/u/31.0/00Do0000000YsLj","restUrl":"/services/data/v31.0/","sobjectUrl":"/services/data/v31.0/sobjects/","searchUrl":"/services/data/v31.0/search/","queryUrl":"/services/data/v31.0/query/","recentItemsUrl":"/services/data/v31.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v31.0/chatter/groups","chatterUsersUrl":"/services/data/v31.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/005o0000000KmuMAAS"},"environment":{"locationUrl":"https://na17.salesforce.com/003o0000005s1KD","uiTheme":"Theme3","dimensions":{"width":"100%","height":"200px"},"record":{"attributes":{"type":"Contact","url":"/services/data/v31.0/sobjects/Contact/003o0000005s1KDAAY"},"Id":"003o0000005s1KDAAY"},"displayLocation":"PageLayout","parameters":{},"sublocation":null,"version":{"season":"SUMMER","api":"31.0"}},"organization":{"organizationId":"00Do0000000YsLjEAK","name":"Refresh","multicurrencyEnabled":false,"currencyIsoCode":"USD"}}}');
+  
+  Sfdc.canvas(function() {
+
+    var sizes = Sfdc.canvas.client.size();
+    // Turn on auto grow with default settings.
+    // Sfdc.canvas.client.autogrow(sr.client);
+    // Save the token
+    Sfdc.canvas.oauth.token(sr.client.oauthToken);
+    // Set the inner html of the overview
+    Sfdc.canvas.byId('content').innerHTML = '    <main id="main" style="max-width: 100%"><div id="application-wrapper" style="min-height: 248px"><div id="content-wrapper"><div id="dossier-wrapper" style="font-size: 1.4em; background-color: #CCD0D2;"><div class="grid"><div class="grid-1-4 left-rail-wrapper" style="width: 20%; "><header class="banner grid-1-1" style="width: 100%; height: 100%; min-height: 248px; display: inline-block"><div class="grid-2-4" style="margin-top: -20px;"><img class="logo" src="https://cdn.refresh.io/public/images/logo.png" height="40" width="40" alt="logo" title="Home" style="width: 15%; height: 15%;"><span style="opacity: 0.95; font-weight: 300; color: #FFF; font-size: 1.9em; margin-left: 10px;position: fixed;">Refresh</span></div><div class="profile-photo-wrapper profile-picture" style="background-image: url(http://m.c.lnkd.licdn.com/mpr/mprx/0_fQ1KQyWlzp7oP_DNSb0Y8g6PzwAor-3NS9Sj8gRgYfKWc1PVfntyGRPaoLw); display: block; max-height: 85px;                            max-width: 85px;margin: 0 auto; overflow: hidden;background-size: cover; background-position: 50% 25%;"></div><div class="info" style="margin: 0 auto; display: block;"><h1 class="name" style="margin: 2px 0px 1px 0px; text-align: center; font-size: 1.5em; font-weight: 300; color: #FFF;">Hemant Thakkar</h1><p class="currentJob" style=" margin: 0px 0px 0px 0px; opacity: 0.55; text-align: center; font-size: 1.2rem;">Associate Developer at Simplion Technologies</p><a class="cta-button" style="display: block; margin: 25px 25px 0 25px;padding: .65rem;background-color: #f09d0b;color: #FFF; border-radius: 4px; border: 1px solid transparent; font-size: 1.5rem;font-weight: 400;text-align: center;text-transform: uppercase;text-decoration: none; margin-right: 20px;" href="https://staging.refresh.io/app/salesforce/dossier/secretKey/2zcm6nsmkwxk47t8kywt18mg8/vieweeId/linked_in_id 82i5jmfyR_" >View More Insights</a></div></header></div><div class="grid-3-4 left-rail-wrapper" style="float: right; max-height: 248px; width: 80%;"><div id="card-wrapper grid-1-1" style="display: inline-block; min-height: 248px; max-height: 100%; overflow: auto; width: 100%"><div class="overview-left" style="display: inline-block; float: left; width: 100%;"><a class="cta-button" style="float: right; background-color: initial; margin: auto; font-size: 1rem; font-weight: 500;" href="https://staging.refresh.io/app/settings/salesforce/secretKey/2zcm6nsmkwxk47t8kywt18mg8" style="float: right;"><i class="fa fa-cog grey-text fa-2x" style="margin-left: 5px; margin-top:-5px; margin-right:4px"></i></a><div class="insight " style="margin: 0.5%; padding: 1px;                                            max-width: 95%;                                            background-color: #fff;                                            border-radius: 5px;                                            box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);"><div class="feature overview" style="padding: 15px; margin-bottom:4px"><i class="fa fa-briefcase icon grey-text" style="font-size: 2rem; margin-top: 3px;"></i><p style="margin-top: 2px; font-size: 1.5rem;">Hemant has been working at Simplion Technologies Inc as a Associate Developer for 5 months</p></div></div><div class="insight " style="margin: 0.5%; padding: 1px;                                            max-width: 95%;                                            background-color: #fff;                                            border-radius: 5px;                                            box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);"><div class="feature overview" style="padding: 15px; margin-bottom:4px"><i class="fa fa-home icon grey-text" style="font-size: 2rem; margin-top: 3px;"></i><p style="margin-top: 2px; font-size: 1.5rem;">Hemant currently lives in India.</p></div></div><a class="cta-button" style="display: block; margin: 25px 25px 0 25px;padding: .65rem;background-color: #f09d0b;color: #FFF; border-radius: 4px; border: 1px solid transparent; font-size: 1.5rem;font-weight: 400;text-align: center;text-transform: uppercase;text-decoration: none; margin-right: 20px;" href="https://app.qa.refresh.io/s/api/v2/salesforce/postToChatter?secretKey=2zcm6nsmkwxk47t8kywt18mg8&subjectId=&text=Insights+about+Hemant Thakkar" >Post to Chatter</a></div></div></div></div></div></div></div></main>';
+
+
+  var url = sr.context.links.queryUrl+"?q=SELECT+ID,NAME+FROM+ACCOUNT";
+
+    
+    Sfdc.canvas.client.ajax(url,
+    { client : sr.client,
+        method: 'GET',
+        contentType: "application/json",
+        success : function(data) {
+          console.debug('Got Data New',data);
+        },
+        failure : function(error) {
+          console.debug('error',error);
+        }
+    });
+
+  });
 </script>
 <script>
 $(document).ready(function() {
@@ -71,39 +99,6 @@ $(document).ready(function() {
     // Not in Iframe
     alert("This canvas app must be included within an iframe");
   }
-       
-
-function callSfdcCanvas() {
-  var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":798284367,"userId":"005o0000000KmuMAAS","client":{"clientId":null,"instanceId":"09Ho00000008knt:","targetOrigin":"https://na17.salesforce.com","instanceUrl":"https://na17.salesforce.com","oauthToken":"00Do0000000YsLj!ARkAQPGgJRzLie421iBYgG6dp4JhW9x3sDI449_A5CczoQKtq5G8u0cmhm6su69MfM5pIAcjEM64qQ4.dZU5ToM6p2tG5s12"},"context":{"user":{"userId":"005o0000000KmuMAAS","userName":"hemant@40demo.com","firstName":"Hemant","lastName":"Thakkar","email":"hemant.thakkar@simplion.com","fullName":"Hemant Thakkar","locale":"en_US","language":"en_US","timeZone":"America/Los_Angeles","profileId":"00eo0000000roK4","roleId":null,"userType":"STANDARD","currencyISOCode":"USD","profilePhotoUrl":"https://c.na17.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://c.na17.content.force.com/profilephoto/005/T","accessibilityModeEnabled":false},"links":{"enterpriseUrl":"/services/Soap/c/31.0/00Do0000000YsLj","metadataUrl":"/services/Soap/m/31.0/00Do0000000YsLj","partnerUrl":"/services/Soap/u/31.0/00Do0000000YsLj","restUrl":"/services/data/v31.0/","sobjectUrl":"/services/data/v31.0/sobjects/","searchUrl":"/services/data/v31.0/search/","queryUrl":"/services/data/v31.0/query/","recentItemsUrl":"/services/data/v31.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v31.0/chatter/groups","chatterUsersUrl":"/services/data/v31.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/005o0000000KmuMAAS"},"environment":{"locationUrl":"https://na17.salesforce.com/003o0000005s1KD","uiTheme":"Theme3","dimensions":{"width":"100%","height":"200px"},"record":{"attributes":{"type":"Contact","url":"/services/data/v31.0/sobjects/Contact/003o0000005s1KDAAY"},"Id":"003o0000005s1KDAAY"},"displayLocation":"PageLayout","parameters":{},"sublocation":null,"version":{"season":"SUMMER","api":"31.0"}},"organization":{"organizationId":"00Do0000000YsLjEAK","name":"Refresh","multicurrencyEnabled":false,"currencyIsoCode":"USD"}}}');
-  
-  Sfdc.canvas(function() {
-
-    var sizes = Sfdc.canvas.client.size();
-    // Turn on auto grow with default settings.
-    // Sfdc.canvas.client.autogrow(sr.client);
-    // Save the token
-    Sfdc.canvas.oauth.token(sr.client.oauthToken);
-    // Set the inner html of the overview
-    Sfdc.canvas.byId('content').innerHTML = '    <main id="main" style="max-width: 100%"><div id="application-wrapper" style="min-height: 248px"><div id="content-wrapper"><div id="dossier-wrapper" style="font-size: 1.4em; background-color: #CCD0D2;"><div class="grid"><div class="grid-1-4 left-rail-wrapper" style="width: 20%; "><header class="banner grid-1-1" style="width: 100%; height: 100%; min-height: 248px; display: inline-block"><div class="grid-2-4" style="margin-top: -20px;"><img class="logo" src="https://cdn.refresh.io/public/images/logo.png" height="40" width="40" alt="logo" title="Home" style="width: 15%; height: 15%;"><span style="opacity: 0.95; font-weight: 300; color: #FFF; font-size: 1.9em; margin-left: 10px;position: fixed;">Refresh</span></div><div class="profile-photo-wrapper profile-picture" style="background-image: url(http://m.c.lnkd.licdn.com/mpr/mprx/0_fQ1KQyWlzp7oP_DNSb0Y8g6PzwAor-3NS9Sj8gRgYfKWc1PVfntyGRPaoLw); display: block; max-height: 85px;                            max-width: 85px;margin: 0 auto; overflow: hidden;background-size: cover; background-position: 50% 25%;"></div><div class="info" style="margin: 0 auto; display: block;"><h1 class="name" style="margin: 2px 0px 1px 0px; text-align: center; font-size: 1.5em; font-weight: 300; color: #FFF;">Hemant Thakkar</h1><p class="currentJob" style=" margin: 0px 0px 0px 0px; opacity: 0.55; text-align: center; font-size: 1.2rem;">Associate Developer at Simplion Technologies</p><a class="cta-button" style="display: block; margin: 25px 25px 0 25px;padding: .65rem;background-color: #f09d0b;color: #FFF; border-radius: 4px; border: 1px solid transparent; font-size: 1.5rem;font-weight: 400;text-align: center;text-transform: uppercase;text-decoration: none; margin-right: 20px;" href="https://staging.refresh.io/app/salesforce/dossier/secretKey/2zcm6nsmkwxk47t8kywt18mg8/vieweeId/linked_in_id 82i5jmfyR_" >View More Insights</a></div></header></div><div class="grid-3-4 left-rail-wrapper" style="float: right; max-height: 248px; width: 80%;"><div id="card-wrapper grid-1-1" style="display: inline-block; min-height: 248px; max-height: 100%; overflow: auto; width: 100%"><div class="overview-left" style="display: inline-block; float: left; width: 100%;"><a class="cta-button" style="float: right; background-color: initial; margin: auto; font-size: 1rem; font-weight: 500;" href="https://staging.refresh.io/app/settings/salesforce/secretKey/2zcm6nsmkwxk47t8kywt18mg8" style="float: right;"><i class="fa fa-cog grey-text fa-2x" style="margin-left: 5px; margin-top:-5px; margin-right:4px"></i></a><div class="insight " style="margin: 0.5%; padding: 1px;                                            max-width: 95%;                                            background-color: #fff;                                            border-radius: 5px;                                            box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);"><div class="feature overview" style="padding: 15px; margin-bottom:4px"><i class="fa fa-briefcase icon grey-text" style="font-size: 2rem; margin-top: 3px;"></i><p style="margin-top: 2px; font-size: 1.5rem;">Hemant has been working at Simplion Technologies Inc as a Associate Developer for 5 months</p></div></div><div class="insight " style="margin: 0.5%; padding: 1px;                                            max-width: 95%;                                            background-color: #fff;                                            border-radius: 5px;                                            box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);"><div class="feature overview" style="padding: 15px; margin-bottom:4px"><i class="fa fa-home icon grey-text" style="font-size: 2rem; margin-top: 3px;"></i><p style="margin-top: 2px; font-size: 1.5rem;">Hemant currently lives in India.</p></div></div><a class="cta-button" style="display: block; margin: 25px 25px 0 25px;padding: .65rem;background-color: #f09d0b;color: #FFF; border-radius: 4px; border: 1px solid transparent; font-size: 1.5rem;font-weight: 400;text-align: center;text-transform: uppercase;text-decoration: none; margin-right: 20px;" href="https://app.qa.refresh.io/s/api/v2/salesforce/postToChatter?secretKey=2zcm6nsmkwxk47t8kywt18mg8&subjectId=&text=Insights+about+Hemant Thakkar" >Post to Chatter</a></div></div></div></div></div></div></div></main>';
-
-
-  var url = sr.context.links.queryUrl+"?q=SELECT+ID,NAME+FROM+ACCOUNT";
-
-    
-    Sfdc.canvas.client.ajax(url,
-    { client : sr.client,
-        method: 'GET',
-        contentType: "application/json",
-        success : function(data) {
-          console.debug('Got Data New',data);
-        },
-        failure : function(error) {
-          console.debug('error',error);
-        }
-    });
-
-  });
-}
   
 </script>
 </head>
