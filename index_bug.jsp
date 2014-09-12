@@ -5,6 +5,7 @@
 <link type="text/css" rel="stylesheet" href="https://cdn.refresh.io/public/stylesheets/app/all.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://app.qa.refresh.io/salesforce/sdk/js/canvas-all.js"></script>
 
 
 <script type="text/javascript">
@@ -37,7 +38,7 @@
     });
 */
 
-  Sfdc.canvas.client.resize(sr.client, {width:"100%"});
+  Sfdc.canvas.client.resize(sr.client, {width:"100%"})
 
   });
 </script>
@@ -103,12 +104,8 @@ $(document).ready(function() {
   }
   
 </script>
-  <script src="canvas-all.js"></script>
-
 </head>
 <body>
-
   <div id='content' style='width:100%; border: none;'></div>
-
 </body>
 </html>
