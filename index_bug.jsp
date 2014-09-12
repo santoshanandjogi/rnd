@@ -15,7 +15,7 @@
 
     var sizes = Sfdc.canvas.client.size();
     // Turn on auto grow with default settings.
-    // Sfdc.canvas.client.autogrow(sr.client);
+    Sfdc.canvas.client.autogrow(sr.client);
     // Save the token
     Sfdc.canvas.oauth.token(sr.client.oauthToken);
     // Set the inner html of the overview
