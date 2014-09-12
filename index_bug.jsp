@@ -103,10 +103,12 @@ $(document).ready(function() {
   }
   
 </script>
+  <script src="canvas-all.js"></script>
+
 </head>
 <body>
+
   <div id='content' style='width:100%; border: none;'></div>
-  <script src="canvas-all.js"></script>
 
 </body>
 </html>
